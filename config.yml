@@ -1,0 +1,11 @@
+_format_version: '2.1'
+services:
+  - name: mockbin-service-1
+    url: http://mockbin.com/request
+    routes:
+      - paths:
+          - '/'
+    plugins:
+      - name: open-api
+        config:
+          endpoint: "http://192.168.1.114:8081/oauth2/introspect"
