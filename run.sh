@@ -1,6 +1,6 @@
 #!/bin/sh
 
-docker build -t kong-demo .
+docker build -t kong-demo --no-cache .
 
 docker run -ti --rm --name kong-go-plugins \
 -e "KONG_DATABASE=off" \
