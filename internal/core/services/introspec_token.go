@@ -47,4 +47,5 @@ func (conf Config) Access(kong *pdk.PDK) {
     }
     kong.ServiceRequest.AddHeader("X-CIF", payload.Subject)
     kong.ServiceRequest.AddHeader("X-API-SCOPE", payload.Scope)
+    kong.ServiceRequest.AddHeader("X-CLIENT-ID", payload.ClientId)
 }
